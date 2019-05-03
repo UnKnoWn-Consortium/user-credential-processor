@@ -1,11 +1,16 @@
 /**
- * Project Uzumaki User Service
+ * User credential processor
  * Created by Thomas Sham on 9/10/2017.
  */
 
 module.exports = (hashingAlgorithm) => {
-    let algorithm = Object.keys(hashingAlgorithm).filter((key, ind, arr) => !!hashingAlgorithm[key]);
-    if (algorithm.length > 1) throw new Error("UserCredentialProcessor: More than one algorithm enabled. ");
+    let algorithm = Object.keys(hashingAlgorithm).filter(
+        (key, ind, arr) => !!hashingAlgorithm[key]
+    );
+
+    if (algorithm.length > 1) {
+        throw new Error("UserCredentialProcessor: More than one algorithm enabled. ");
+    }
 
     let normalizedAlgorithm = algorithm[0].toLowerCase();
 
