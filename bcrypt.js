@@ -7,7 +7,11 @@ module.exports = class BcryptProcessor {
      * @param {number} [options.saltRounds] - The cost of processing the data. For details, refer to https://github.com/kelektiv/node.bcrypt.js#a-note-on-rounds
      */
     constructor (options) {
-        if (!!options && typeof options === "object" && options.hasOwnProperty("saltRounds")){
+        if (
+            !!options &&
+            typeof options === "object" &&
+            options.hasOwnProperty("saltRounds")
+        ){
             this.options = options;
         }else{
             this.options = {

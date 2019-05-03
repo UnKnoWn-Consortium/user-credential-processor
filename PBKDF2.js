@@ -42,7 +42,7 @@ module.exports = class PBKDF2Processor {
      */
     constructor (options) {
         if (options && typeof options === "object"){
-            this.options = Object.assign(Object.assign({}, defaults), options);
+            this.options = Object.assign({}, defaults, options);
         } else {
             this.options = defaults;
         }

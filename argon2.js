@@ -17,7 +17,7 @@ module.exports = class Argon2Processor {
             options &&
             typeof options === "object"
         ) {
-            this.options = options;
+            this.options = Object.assign({}, argon2.defaults, options);
         } else {
             this.options = argon2.defaults;
         }
