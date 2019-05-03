@@ -1,0 +1,28 @@
+{
+  "name": "user-credential-processor",
+  "version": "1.0.0",
+  "description": "A library for normalizing various password hashing libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OblonDATA-IO/user-credential-processor.git"
+  },
+  "keywords": [
+    "password",
+    "hashing",
+    "credentials"
+  ],
+  "author": "Thomas Sham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OblonDATA-IO/user-credential-processor/issues"
+  },
+  "homepage": "https://github.com/OblonDATA-IO/user-credential-processor#readme",
+  "dependencies": {
+    "argon2": "^0.22.0",
+    "bcrypt": "^3.0.6"
+  }
+}
